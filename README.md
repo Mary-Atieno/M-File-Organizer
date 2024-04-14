@@ -1,6 +1,6 @@
 # PROJECT NAME
 
-My-Portfolio-Web
+M-file-organizer
 
 ## AUTHOR
 
