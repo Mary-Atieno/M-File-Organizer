@@ -24,7 +24,7 @@ PHP - For making the page interactive.
 
 ## LIVE LINK
 
-Find the deployed app: < >
+Find the deployed app: <https://mary-atieno.github.io/M-File-Organizer/>
 
 ## MIT License
 
