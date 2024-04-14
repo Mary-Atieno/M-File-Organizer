@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-File Organizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- main app body container -->
+    <div class="app-container">
+        <div class="left-area">
+            <div class="app-name">M-File Organizer</div>
+            <a href="#" class="item-link active" id="pageLink">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-grid" viewBox="0 0 24 24">
+                    <defs />
+                    <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
+                </svg>
+            </a>
+    
+    <a href="#" class="item-link" id="pageLink">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-settings" viewBox="0 0 24 24">
+        <defs />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+      </svg>
+    </a> 
+    <!-- logout button -->
+    <button class="btn btn-primary" onclick="document.location='loginsignup.html'">login</button>  
+    <button class="btn-logout" onclick="document.location='logout.html'" >Log Out</button>
+  </div>
+<!-- main page area  -->
+<div class="main-area">
+<!-- search bar -->
+    <div class="main-area-header">
+      <div class="search-wrapper" id="searchLine">
+      <input class="search-input" type="text" placeholder="e.g. files.doc">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+        <defs/>
+        <circle cx="11" cy="11" r="8"/>
+        <path d="M21 21l-4.35-4.35"/>
+      </svg>
+    </div>
+    </div>
+
+    <!-- buttons add delete rename share -->
+<div class="top-menu">
+  <button onclick="openModel('newFile')" style="--btn-bg-color: rgb(190, 173, 16)"><i class="fa-solid fa-file-circle-plus"></i>Add files</button>
+  <button onclick="openModel('newFolder')" style="--btn-bg-color: rgb(221, 202, 27)"><i class="fa-regular fa-folder-open"></i>Add folder</button>
+  <button onclick="openModel('rename')" style="--btn-bg-color:rgb(32, 175, 231);"><i class="fa-solid fa-pen-to-square"></i>Rename</button>
+  <button onclick="openModel('delete')" style="--btn-bg-color: rgb(238, 107, 107)"><i class="fa-solid fa-trash"></i>Delete</button>
+  <button onclick="openModel"><i class="fa-solid fa-copy"></i>Copy</button>
+  <button onclick="openModel"><i class="fa-solid fa-scissors"></i>Cut</button>
+  <button onclick="openModel"><i class="fa-regular fa-paste"></i>Paste</button>
+</div>
+    <!-- content page -->
+    <section class="content-section">
+      <h1 class="section-header">Quick Access</h1>
+      <div class="access-links">
+        <div class="access-link-wrapper">
+          <div class="access-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            </div>
+            <!-- images file -->
+            <span class="access-text">Image</span>   
+        </div>
+        <div class="access-link-wrapper">
+          <div class="access-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/> <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+          <!-- music file -->
+          <span class="access-text">Music</span>
+        </div>
+         <div class="access-link-wrapper">
+          <div class="access-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          <!-- video file -->
+          <span class="access-text">Video</span>
+        </div>
+        <div class="access-link-wrapper">
+          <div class="access-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left">
+              <line x1="17" y1="10" x2="3" y2="10"/>
+              <line x1="21" y1="6" x2="3" y2="6"/>
+              <line x1="21" y1="14" x2="3" y2="14"/>
+              <line x1="17" y1="18" x2="3" y2="18"/>
+            </svg>
+          </div>
+          <!-- documents file -->
+          <span class="access-text">Docs</span>
+        </div>
+        <div class="access-link-wrapper">
+          <div class="access-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <!-- apps -->
+          <span class="access-text">Apps</span>
+        </div>
+        <div class="access-link-wrapper">
+          <div class="access-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="8 12 12 16 16 12"/>
+              <line x1="12" y1="8" x2="12" y2="16"/>
+            </svg>
+          </div>
+          <!-- downloads file -->
+          <span class="access-text">Download</span>
+        </div>
+      </div>
+    </section>
+     <section class="content-section">
+       <div class="section-header-wrapper">
+         <h1 class="section-header">Preview</h1>
+         <a class="section-header-link">
+           View in folders
+         </a>
+       </div>
+       <div class="content-section-line">
+        <div class="section-part left">
+          <a class="image-wrapper">
+            <div class="image-overlay">
+              <div class="video-info">
+                <div class="video-info-text">
+                  <p class="video-name medium">Ballerina</p>
+                  <p class="video-subtext medium">300.5 MB</p>
+                </div>
+                <button class="btn-play"></button>
+            </div>
+            </div>
+            <img src="images/dance.jpg"/>
+            <span class="video-time">2:8:32</span>
+          </a>
+        </div>
+        <div class="section-part right">
+          <div class="content-part-line">
+            <a class="image-wrapper">
+              <div class="image-overlay">
+              <div class="video-info">
+              <div class="video-info-text">
+                <p class="video-name tiny">Cinderella 1</p>
+                <p class="video-subtext tiny">220 MB</p>
+              </div>
+            </div>
+            </div>
+            <img src="images/cinderella.jpg"/>
+              <span class="video-time">1:02:35</span>
+          </a>
+          <!-- end of cinderella -->
+          <a class="image-wrapper">
+              <div class="image-overlay">
+              <div class="video-info">
+              <div class="video-info-text">
+                <p class="video-name tiny">Frozen II</p>
+                <p class="video-subtext tiny">250.2 MB</p>
+              </div>
+            </div>
+            </div>
+              <img src="images/Frozen.jpg"/>
+              <span class="video-time">1:04:15</span>
+            </a>
+          </div>
+        </div>
+       </div>
+     </section>
+<!-- end of frozen -->
+     <section class="content-section">
+      <div class="section-header-wrapper">
+        <h1 class="section-header">Recent Files</h1>
+        <a class="section-header-link">
+          View all files
+        </a>
+      </div>
+      <div class="files-table">
+        <div class="files-table-header">
+          <div class="column-header table-cell">Name</div>
+          <div class="column-header table-cell size-cell">Size</div>
+          <div class="column-header table-cell">Last Modified</div>
+          <div class="column-header table-cell">Action</div>
+        </div>
+        <div class="files-table-row">
+          <div class="table-cell name-cell pdf">WebTechnology.pdf</div>
+          <div class="table-cell">55 MB</div>
+          <div class="table-cell">Apr 11, 2024</div>
+          <div class="table-cell action-cell">
+            <button class="more-action">Delete</button>
+          </div>
+        </div>
+        <!-- end of webtech pdf -->
+<div class="files-table-row">
+          <div class="table-cell name-cell pdf">Software eng.pdf</div>
+          <div class="table-cell">70 MB</div>
+          <div class="table-cell">Apr 12, 2024</div>
+          <div class="table-cell action-cell">
+            <button class="more-action">Delete</button>
+          </div>
+        </div>
+        <!-- end of software eng -->
+        <div class="files-table-row">
+          <div class="table-cell name-cell jpg">Flowers.jpg</div>
+          <div class="table-cell size-cell">600 KB</div>
+          <div class="table-cell">Apr 13, 2024</div>
+          <div class="table-cell action-cell">
+            <button class="more-action">Delete</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
